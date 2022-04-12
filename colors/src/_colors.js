@@ -1,9 +1,21 @@
-/**
- * Do not edit directly
- * Generated on Fri, 17 Dec 2021 12:28:28 GMT
- */
-
 import { css } from '@lion/core';
+
+// DEPRECATE::
+
+export const gray100 = css`#F6F4F4`;
+export const gray200 = css`#ECE9E9`;
+export const gray300 = css`#D8D5D5`;
+export const gray400 = css`#B9B6B6`;
+export const gray500 = css`#525050`;
+export const accent100 = css`#AE1B1E`;
+export const accent200 = css`#761416`;
+export const accent300 = css`#005861`;
+export const basic100 = css`#FFFFFF`;
+export const basic200 = css`#110304`;
+export const semantic100 = css`#FF333F`;
+export const semantic200 = css`#FFA300`;
+export const semantic300 = css`#33C778`;
+export const semantic400 = css`#3778C8`;
 
 export const coolGray50 = css`#F9FAFB`;
 export const coolGray100 = css`#F3F4F6`;

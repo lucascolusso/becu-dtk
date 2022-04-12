@@ -17,25 +17,23 @@ export default {
         value: '#525050',
       },
     },
-    accentMajor: {
+    accent: {
       100: {
         value: '#AE1B1E',
       },
       200: {
         value: '#761416',
       },
+      300: {
+        value: '#005861',
+      },
     },
     basic: {
-      0: {
+      100: {
         value: '#FFFFFF',
       },
-      100: {
+      200: {
         value: '#110304',
-      },
-    },
-    accentMinor: {
-      100: {
-        value: '#005861',
       },
     },
     semantic: {

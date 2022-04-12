@@ -31,7 +31,7 @@ export class ColorToggler extends LitElement {
           position: relative;
           margin: 4px;
           cursor: pointer;
-          border: 1px solid ${colors.coolGray600};
+          border: 2px solid ${colors.gray500};
           border-radius: 100%;
           transition: border-color 0.2s ease-in-out;
         }
@@ -46,27 +46,8 @@ export class ColorToggler extends LitElement {
         }
 
         .radio:hover {
-          border-color: ${colors.coolGray400};
+          border-color: ${colors.gray300};
         }
-
-        ${colorKeys
-          .map(
-            (col) => css`
-              .${unsafeCSS(col)} {
-                background-color: ${colors[`${col}500`]};
-              }
-
-              .${unsafeCSS(col)}:checked {
-                border-color: ${colors[`${col}500`]};
-              }
-            `
-          )
-          .reduce(
-            (acc, curr) =>
-              css`
-                ${acc} ${curr}
-              `
-          )}
       `,
     ];
   }
