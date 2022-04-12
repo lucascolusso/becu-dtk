@@ -13,18 +13,18 @@ The color palettes are tokenized as CSS tagged literals (CSSResult) which can be
 You can import the token group from the main entrypoint (or `/tokens`):
 
 ```js
-import { colors } from '@divriots/starter-simba'; // colors.red500
+import { colors } from '@divriots/starter-simba'; // colors.accent100
 ```
 
 or a specific color from the token entrypoint:
 
 ```js
-import { red500 } from '@divriots/starter-simba/colors';
+import { accent100 } from '@divriots/starter-simba/colors';
 ```
 
 ```js preview-story
 import { css, LitElement } from '@divriots/starter-simba';
-import { red500 } from '@divriots/starter-simba/colors';
+import { accent100 } from '@divriots/starter-simba/colors';
 
 class DemoRed extends LitElement {
   static get styles() {
@@ -33,7 +33,7 @@ class DemoRed extends LitElement {
         display: block;
         width: 50px;
         height: 50px;
-        background-color: ${red500};
+        background-color: ${accent100};
       }
     `;
   }
@@ -48,23 +48,23 @@ export const usageInCE = () => html`<demo-red></demo-red>`;
 ### Accents
 
 ```js story
-export const accentMajor = () =>
+export const accent = () =>
   html`<token-display
     token-type="color"
     .tokens=${Object.entries(_colors).filter((entry) =>
-      entry[0].startsWith('accentMajor')
+      entry[0].startsWith('accent')
     )}
   ></token-display>`;
 ```
 
-### Grays
+### Basic
 
 ```js story
-export const coolGray = () =>
+export const basic = () =>
   html`<token-display
     token-type="color"
     .tokens=${Object.entries(_colors).filter((entry) =>
-      entry[0].startsWith('coolGray')
+      entry[0].startsWith('basic')
     )}
   ></token-display>`;
 ```
@@ -84,11 +84,11 @@ export const gray = () =>
 ### Semantic
 
 ```js story
-export const amber = () =>
+export const semantic = () =>
   html`<token-display
     token-type="color"
     .tokens=${Object.entries(_colors).filter((entry) =>
-      entry[0].startsWith('amber')
+      entry[0].startsWith('semantic')
     )}
   ></token-display>`;
 ```
