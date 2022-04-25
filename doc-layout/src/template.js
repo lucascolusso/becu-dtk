@@ -18,7 +18,7 @@ export const docLayoutTemplate = (content, context) => {
       }
       .topbar {
         width: 100%;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: right;
       }
@@ -49,25 +49,12 @@ export const docLayoutTemplate = (content, context) => {
       }
     </style>
     <dockit-layout
+      disable-color-scheme-change
+      initial-color-scheme="light"
       .context="${context}"
-      @color-scheme-change="${(event) => {
-        if (event.detail.colorScheme === 'dark') {
-          document.documentElement.classList.add('dark');
-          document.documentElement.setAttribute('theme', 'dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.setAttribute('theme', 'light');
-        }
-      }}"
     >
-      <div class="logo" slot="logo" aria-label="starter-simba">
-        ${unsafeHTML(logoSvg)}
-      </div>
-      <div class="topbar" slot="topbar">
-        Themes:&nbsp;
-        <color-toggler></color-toggler>
-      </div>
-      <div class="prose dark:prose-invert">${unsafeHTML(content)}</div>
+      <div class="logo" slot="logo" aria-label="starter-simba">HALO</div>
+      <div class="prose">${unsafeHTML(content)}</div>
     </dockit-layout>
   `;
 };
